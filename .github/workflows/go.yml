@@ -8,11 +8,11 @@ on:
 
 jobs:
   test:
-    runs-on: ${{ matrix.os_version }}
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         go_version: ["1.18", "1.17"]
-        os_version: ["ubuntu-latest", "ubuntu-18.04, "ubuntu-24.04"]
+        os: ["ubuntu-latest", "ubuntu-18.04, "ubuntu-24.04"]
     steps:
       - uses: actions/checkout@v3
 
